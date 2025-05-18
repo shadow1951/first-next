@@ -27,8 +27,16 @@ const games = [
   },
 ];
 
+type Game = {
+  id: string;
+  title: string;
+  image: string;
+  lore: string;
+  release: string;
+};
+
 export default function Home() {
-  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   return (
     <main
